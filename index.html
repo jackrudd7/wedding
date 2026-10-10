@@ -1,6 +1,4 @@
-from pathlib import Path
-
-html = r'''<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -121,7 +119,4 @@ document.getElementById('rsvpForm').addEventListener('submit',function(e){
 </body>
 </html>'''
 
-path = Path("/mnt/data/jack_and_sarah_wedding_website.html")
-path.write_text(html, encoding="utf-8")
-print(f"Created the HTML website: {path}")
-print(f"File size: {path.stat().st_size:,} bytes")
+
