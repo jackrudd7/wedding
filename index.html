@@ -76,6 +76,22 @@ img,video,iframe{max-width:100%}
 @media(max-width:600px){
   #site::before,#site::after{width:14px;opacity:.5;background-size:100% 300px,100% 300px}
 }
+
+/* Keep mobile content inset so the floral side borders remain visible */
+@media(max-width:600px){
+  #site::before,#site::after{width:30px;opacity:.9}
+  #site main{
+    width:calc(100% - 60px);
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:.35rem;
+    padding-right:.35rem;
+  }
+  #site .hero{padding-left:2rem;padding-right:2rem}
+  #site .intro,#site .section{min-width:0}
+  #site .card,#site .note{max-width:100%;overflow-wrap:anywhere}
+}
 </style></head><body>
 <section id="loginScreen" class="login-wrap"><div class="login"><div class="eyebrow">A little celebration in Cornwall</div><h1>Jack &amp; Sarah's<br>Wedding</h1><p>Monday, 10 April 2028 · Knightor Winery</p><form id="loginForm"><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit" style="width:100%">Enter the website</button><p id="loginError" class="error" role="alert"></p></form><p class="small">Guest access · This is a simple browser-side gate, not secure password protection.</p></div></section>
 <div id="site" class="hidden"><header class="hero"><div><div class="eyebrow">Please join us to celebrate</div><h1>Jack &amp; Sarah</h1><p>10 April 2028 · Knightor Winery, Cornwall</p><a class="button" href="#details">Wedding details</a></div></header><main>
