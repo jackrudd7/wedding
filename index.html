@@ -1,122 +1,22 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jack &amp; Sarah's Wedding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--green:#405b49;--sage:#dce5d7;--cream:#fbf8f0;--gold:#b99a5b;--ink:#29352d}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
-a{color:var(--green)}.hero{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.2rem;color:white;background:linear-gradient(120deg,rgba(25,48,34,.76),rgba(47,65,47,.25)),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2000&q=85') center/cover}
-.hero h1{font-size:clamp(2.6rem,7vw,5.8rem);line-height:1.05;font-weight:normal;margin:.2rem 0}.eyebrow{letter-spacing:.22em;text-transform:uppercase;font: .8rem Arial,sans-serif}.hero p{font-size:1.25rem}.button{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:.75rem 1.15rem;border:0;cursor:pointer;font: .95rem Arial,sans-serif;border-radius:2px}.hero .button{background:var(--cream);color:var(--green)}
-main{max-width:1050px;margin:auto;padding:1rem 1.25rem 4rem}.intro{text-align:center;max-width:720px;margin:3.5rem auto}.intro h2,.section h2{font-size:2rem;font-weight:normal;color:var(--green)}.section{padding:2.5rem 0;border-top:1px solid #d8d7c9}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}.card{padding:1.25rem;background:white;border:1px solid #e5e1d5}.card h3{color:var(--green);margin-top:0}.note{font: .9rem Arial,sans-serif;background:var(--sage);padding:1rem}.map{width:100%;height:360px;border:0}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}label{display:block;font: .95rem Arial,sans-serif;margin:.65rem 0}input,select,textarea{display:block;width:100%;padding:.7rem;border:1px solid #c9cbbd;background:white;font:1rem Arial,sans-serif;margin-top:.3rem}textarea{min-height:100px}footer{text-align:center;padding:2rem;background:var(--green);color:white}.hidden{display:none!important}.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.2rem;background:linear-gradient(rgba(30,48,34,.68),rgba(30,48,34,.68)),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1600&q=80') center/cover}.login{width:min(440px,100%);background:var(--cream);padding:2rem;text-align:center;box-shadow:0 12px 45px #17251a55}.login h1{font-size:2.4rem;font-weight:normal;color:var(--green);line-height:1.1}.login form{text-align:left}.error{color:#9d3025;font: .9rem Arial,sans-serif;min-height:1.4rem}.small{font: .8rem Arial,sans-serif;color:#64695f}
-@media(max-width:600px){.hero{min-height:62vh}.section{padding:1.8rem 0}.map{height:290px}}
-</style>
-</head>
-<body>
-<section id="loginScreen" class="login-wrap">
-  <div class="login">
-    <div class="eyebrow">A little celebration in Cornwall</div>
-    <h1>Jack &amp; Sarah's<br>Wedding</h1>
-    <p>Monday, 10 April 2028 · Knightor Winery</p>
-    <form id="loginForm">
-      <label>Username<input id="username" name="username" autocomplete="username" required></label>
-      <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label>
-      <button class="button" type="submit" style="width:100%">Enter the website</button>
-      <p id="loginError" class="error" role="alert"></p>
-    </form>
-    <p class="small">Guest access · This is a simple browser-side gate, not secure password protection.</p>
-  </div>
-</section>
-<div id="site" class="hidden">
-<header class="hero">
-  <div><div class="eyebrow">Please join us to celebrate</div><h1>Jack &amp; Sarah</h1><p>10 April 2028 · Knightor Winery, Cornwall</p><a class="button" href="#details">Wedding details</a></div>
-</header>
-<main>
-  <section class="intro">
-    <div class="eyebrow">A day to remember</div>
-    <h2>Love, laughter &amp; the Cornish countryside</h2>
-    <p>We're so excited to celebrate with you. This little corner of our website has the details you'll need for our wedding day, plus travel and accommodation ideas to help you plan your visit.</p>
-  </section>
-  <section id="details" class="section">
-    <h2>The wedding</h2>
-    <div class="grid">
-      <article class="card"><h3>When</h3><p><strong>Monday, 10 April 2028</strong></p><p>Please check back nearer the day for the final timings and schedule.</p></article>
-      <article class="card"><h3>Where</h3><p><strong>Knightor Winery</strong><br>Trethurgy, near St Austell, Cornwall<br>PL26 8YQ</p><a href="https://www.knightor.com/weddings.html" target="_blank" rel="noopener">Official wedding venue website ↗</a></article>
-      <article class="card"><h3>What to wear</h3><p>Think smart, comfortable and countryside-friendly. Cornwall can be breezy, so a layer and sensible footwear are a good idea.</p></article>
-    </div>
-  </section>
-  <section class="section">
-    <h2>Find the venue</h2>
-    <p>Knightor Winery is near St Austell and the Eden Project. Use the map below to plan your route and check journey times before setting off.</p>
-    <iframe class="map" title="Google Map showing Knightor Winery" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Knightor%20Winery%2C%20Trethurgy%2C%20Cornwall&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-    <p><a class="button" href="https://www.google.com/maps/search/?api=1&query=Knightor+Winery+Trethurgy+Cornwall" target="_blank" rel="noopener">Open in Google Maps ↗</a></p>
-  </section>
-  <section class="section">
-    <h2>Places to stay</h2>
-    <div class="grid">
-      <article class="card"><h3>On-site accommodation</h3><p>Knightor may have accommodation options associated with the venue. Contact them directly to confirm availability, prices and booking arrangements for your dates.</p><a href="https://www.knightor.com/" target="_blank" rel="noopener">Contact Knightor ↗</a></article>
-      <article class="card"><h3>Travelodge</h3><p>Check nearby Travelodge locations around St Austell and the surrounding area, and compare the route to the venue before booking.</p><a href="https://www.travelodge.co.uk/" target="_blank" rel="noopener">Find a Travelodge ↗</a></article>
-      <article class="card"><h3>More local stays</h3><p>There are hotels, B&amp;Bs and holiday lets around St Austell, Charlestown and the surrounding villages.</p><a href="https://www.google.com/maps/search/hotels+near+Knightor+Winery+Cornwall/" target="_blank" rel="noopener">Browse stays on Google Maps ↗</a></article>
-    </div>
-    <p class="note">Accommodation details and availability can change, so please confirm directly with the provider. If you plan to drink, please arrange a taxi or a designated driver in advance.</p>
-  </section>
-  <section class="section">
-    <h2>Travel tips</h2>
-    <div class="grid">
-      <article class="card"><h3>By car</h3><p>Use the Google Maps link above for live directions. Allow extra time for rural roads and parking.</p></article>
-      <article class="card"><h3>By train</h3><p>St Austell is the nearest major railway station. Check train times and arrange onward transport to the venue ahead of time.</p><a href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener">National Rail ↗</a></article>
-      <article class="card"><h3>Dietary or access needs</h3><p>Please tell us about dietary requirements, allergies or accessibility needs in the RSVP form below so we can plan ahead.</p></article>
-    </div>
-  </section>
-  <section id="rsvp" class="section">
-    <h2>RSVP</h2>
-    <p>Please use this form to prepare your reply. <strong>At the moment, this form does not send or save submissions.</strong> To collect real replies, it will need connecting to a service such as Google Forms.</p>
-    <form id="rsvpForm">
-      <div class="form-grid">
-        <label>Your name(s)<input name="names" required placeholder="Names of everyone replying"></label>
-        <label>Can you join us?<select name="attendance" required><option value="">Please choose</option><option>Joyfully accepts</option><option>Regretfully declines</option></select></label>
-        <label>Number attending<input name="count" type="number" min="0" max="20" value="1"></label>
-        <label>Dietary requirements<input name="dietary" placeholder="e.g. vegetarian, vegan, gluten-free"></label>
-      </div>
-      <label>Allergies or additional dietary details<textarea name="allergies" placeholder="Please include any important allergy information"></textarea></label>
-      <label>Accessibility or other requests<textarea name="accessibility" placeholder="Anything that would help you enjoy the day"></textarea></label>
-      <button class="button" type="submit">Preview RSVP</button>
-      <p id="rsvpMessage" class="note hidden" role="status"></p>
-    </form>
-  </section>
-  <section class="section">
-    <h2>We'll see you there</h2>
-    <p>Thank you for being part of our lives. We can't wait to celebrate with you in Cornwall!</p>
-    <p><strong>Jack &amp; Sarah</strong></p>
-  </section>
-</main>
-<footer><p>Jack &amp; Sarah's Wedding · 10 April 2028</p><p class="small" style="color:#e5e8df">Made with love in Cornwall</p></footer>
-</div>
+:root{--green:#405b49;--sage:#dce5d7;--cream:#fbf8f0;--gold:#b99a5b;--ink:#29352d}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif;line-height:1.6}a{color:var(--green)}.hero{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.2rem;color:white;background:linear-gradient(120deg,rgba(25,48,34,.76),rgba(47,65,47,.25)),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2000&q=85') center/cover}.hero h1{font-family:'Great Vibes',cursive;font-size:clamp(4rem,10vw,8rem);line-height:1.12;font-weight:normal;margin:.2rem 0 .6rem;text-shadow:0 2px 16px #0004}.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:.8rem Arial,sans-serif}.hero p{font-family:'Playfair Display',Georgia,serif;font-size:1.25rem;letter-spacing:.035em}.button{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:.75rem 1.15rem;border:0;cursor:pointer;font:.95rem Arial,sans-serif;border-radius:2px}.hero .button{background:var(--cream);color:var(--green)}main{max-width:1050px;margin:auto;padding:1rem 1.25rem 4rem}.intro{text-align:center;max-width:720px;margin:3.5rem auto}.intro h2,.section h2{font-family:'Playfair Display',Georgia,serif;font-size:2rem;font-weight:normal;color:var(--green)}.section{padding:2.5rem 0;border-top:1px solid #d8d7c9}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}.card{padding:1.25rem;background:white;border:1px solid #e5e1d5}.card h3{color:var(--green);margin-top:0}.note{font:.9rem Arial,sans-serif;background:var(--sage);padding:1rem}.map{width:100%;height:360px;border:0}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}label{display:block;font:.95rem Arial,sans-serif;margin:.65rem 0}input,select,textarea{display:block;width:100%;padding:.7rem;border:1px solid #c9cbbd;background:white;font:1rem Arial,sans-serif;margin-top:.3rem}textarea{min-height:100px}footer{text-align:center;padding:2rem;background:var(--green);color:white}.hidden{display:none!important}.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.2rem;background:linear-gradient(#1e3022ad,#1e3022ad),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1600&q=80') center/cover}.login{width:min(440px,100%);background:var(--cream);padding:2rem;text-align:center;box-shadow:0 12px 45px #17251a55}.login h1{font-family:'Great Vibes',cursive;font-size:3.5rem;font-weight:normal;color:var(--green);line-height:1.1;margin:.4rem 0}.login form{text-align:left}.error{color:#9d3025;font:.9rem Arial,sans-serif;min-height:1.4rem}.small{font:.8rem Arial,sans-serif;color:#64695f}@media(max-width:600px){.hero{min-height:62vh}.hero h1{font-size:clamp(3.6rem,15vw,5.5rem)}.section{padding:1.8rem 0}.map{height:290px}}
+</style></head><body>
+<section id="loginScreen" class="login-wrap"><div class="login"><div class="eyebrow">A little celebration in Cornwall</div><h1>Jack &amp; Sarah's<br>Wedding</h1><p>Monday, 10 April 2028 · Knightor Winery</p><form id="loginForm"><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit" style="width:100%">Enter the website</button><p id="loginError" class="error" role="alert"></p></form><p class="small">Guest access · This is a simple browser-side gate, not secure password protection.</p></div></section>
+<div id="site" class="hidden"><header class="hero"><div><div class="eyebrow">Please join us to celebrate</div><h1>Jack &amp; Sarah</h1><p>10 April 2028 · Knightor Winery, Cornwall</p><a class="button" href="#details">Wedding details</a></div></header><main>
+<section class="intro"><div class="eyebrow">A day to remember</div><h2>Love, laughter &amp; the Cornish countryside</h2><p>We're so excited to celebrate with you. This little corner of our website has the details you'll need for our wedding day, plus travel and accommodation ideas to help you plan your visit.</p></section>
+<section id="details" class="section"><h2>The wedding</h2><div class="grid"><article class="card"><h3>When</h3><p><strong>Monday, 10 April 2028</strong></p><p>Please check back nearer the day for the final timings and schedule.</p></article><article class="card"><h3>Where</h3><p><strong>Knightor Winery</strong><br>Trethurgy, near St Austell, Cornwall<br>PL26 8YQ</p><a href="https://www.knightor.com/weddings.html" target="_blank" rel="noopener">Official wedding venue website ↗</a></article><article class="card"><h3>What to wear</h3><p>Think smart, comfortable and countryside-friendly. Cornwall can be breezy, so a layer and sensible footwear are a good idea.</p></article></div></section>
+<section class="section"><h2>Find the venue</h2><p>Knightor Winery is near St Austell and the Eden Project. Use the map below to plan your route and check journey times before setting off.</p><iframe class="map" title="Google Map showing Knightor Winery" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Knightor%20Winery%2C%20Trethurgy%2C%20Cornwall&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><p><a class="button" href="https://www.google.com/maps/search/?api=1&query=Knightor+Winery+Trethurgy+Cornwall" target="_blank" rel="noopener">Open in Google Maps ↗</a></p></section>
+<section class="section"><h2>Places to stay</h2><div class="grid"><article class="card"><h3>On-site accommodation</h3><p>Knightor may have accommodation options associated with the venue. Contact them directly to confirm availability, prices and booking arrangements for your dates.</p><a href="https://www.knightor.com/" target="_blank" rel="noopener">Contact Knightor ↗</a></article><article class="card"><h3>Travelodge</h3><p>Check nearby Travelodge locations around St Austell and the surrounding area, and compare the route to the venue before booking.</p><a href="https://www.travelodge.co.uk/" target="_blank" rel="noopener">Find a Travelodge ↗</a></article><article class="card"><h3>More local stays</h3><p>There are hotels, B&amp;Bs and holiday lets around St Austell, Charlestown and the surrounding villages.</p><a href="https://www.google.com/maps/search/hotels+near+Knightor+Winery+Cornwall/" target="_blank" rel="noopener">Browse stays on Google Maps ↗</a></article></div><p class="note">Accommodation details and availability can change, so please confirm directly with the provider. If you plan to drink, please arrange a taxi or a designated driver in advance.</p></section>
+<section class="section"><h2>Travel tips</h2><div class="grid"><article class="card"><h3>By car</h3><p>Use the Google Maps link above for live directions. Allow extra time for rural roads and parking.</p></article><article class="card"><h3>By train</h3><p>St Austell is the nearest major railway station. Check train times and arrange onward transport to the venue ahead of time.</p><a href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener">National Rail ↗</a></article><article class="card"><h3>Dietary or access needs</h3><p>Please tell us about dietary requirements, allergies or accessibility needs in the RSVP form below so we can plan ahead.</p></article></div></section>
+<section id="rsvp" class="section"><h2>RSVP</h2><p>Please use this form to prepare your reply. <strong>At the moment, this form does not send or save submissions.</strong> To collect real replies, it will need connecting to a service such as Google Forms.</p><form id="rsvpForm"><div class="form-grid"><label>Your name(s)<input name="names" required placeholder="Names of everyone replying"></label><label>Can you join us?<select name="attendance" required><option value="">Please choose</option><option>Joyfully accepts</option><option>Regretfully declines</option></select></label><label>Number attending<input name="count" type="number" min="0" max="20" value="1"></label><label>Dietary requirements<input name="dietary" placeholder="e.g. vegetarian, vegan, gluten-free"></label></div><label>Allergies or additional dietary details<textarea name="allergies" placeholder="Please include any important allergy information"></textarea></label><label>Accessibility or other requests<textarea name="accessibility" placeholder="Anything that would help you enjoy the day"></textarea></label><button class="button" type="submit">Preview RSVP</button><p id="rsvpMessage" class="note hidden" role="status"></p></form></section>
+<section class="section"><h2>We'll see you there</h2><p>Thank you for being part of our lives. We can't wait to celebrate with you in Cornwall!</p><p><strong>Jack &amp; Sarah</strong></p></section></main><footer><p>Jack &amp; Sarah's Wedding · 10 April 2028</p><p class="small" style="color:#e5e8df">Made with love in Cornwall</p></footer></div>
 <script>
-const loginForm=document.getElementById('loginForm');
-loginForm.addEventListener('submit',function(e){
-  e.preventDefault();
-  const u=document.getElementById('username').value.trim();
-  const p=document.getElementById('password').value;
-  if(u.toLowerCase()==='guest' && p==='10042028'){
-    document.getElementById('loginScreen').classList.add('hidden');
-    document.getElementById('site').classList.remove('hidden');
-    window.scrollTo(0,0);
-  }else{
-    document.getElementById('loginError').textContent='That username or password does not match. Please try again.';
-  }
-});
-document.getElementById('rsvpForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const data=new FormData(e.target);
-  const summary=[`Names: ${data.get('names')}`,`Attendance: ${data.get('attendance')}`,`Number attending: ${data.get('count')}`,`Dietary requirements: ${data.get('dietary')||'None entered'}`,`Allergies/details: ${data.get('allergies')||'None entered'}`,`Accessibility/other: ${data.get('accessibility')||'None entered'}`].join('\n');
-  const box=document.getElementById('rsvpMessage');
-  box.textContent='RSVP preview only — nothing has been sent or saved.\\n\\n'+summary;
-  box.classList.remove('hidden');
-});
-</script>
-</body>
-</html>
-
-
+document.getElementById('loginForm').addEventListener('submit',function(e){e.preventDefault();const u=document.getElementById('username').value.trim();const p=document.getElementById('password').value;if(u.toLowerCase()==='guest'&&p==='10042028'){document.getElementById('loginScreen').classList.add('hidden');document.getElementById('site').classList.remove('hidden');window.scrollTo(0,0)}else{document.getElementById('loginError').textContent='That username or password does not match. Please try again.'}});
+document.getElementById('rsvpForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(e.target);const s=[`Names: ${d.get('names')}`,`Attendance: ${d.get('attendance')}`,`Number attending: ${d.get('count')}`,`Dietary requirements: ${d.get('dietary')||'None entered'}`,`Allergies/details: ${d.get('allergies')||'None entered'}`,`Accessibility/other: ${d.get('accessibility')||'None entered'}`].join('\n');const b=document.getElementById('rsvpMessage');b.textContent='RSVP preview only — nothing has been sent or saved.\n\n'+s;b.classList.remove('hidden')});
+</script></body></html>
