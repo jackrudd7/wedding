@@ -107,6 +107,18 @@ img,video,iframe{max-width:100%}
 <section id="loginScreen" class="login-wrap"><div class="login"><div class="eyebrow">A little celebration in Cornwall</div><h1>Jack &amp; Sarah's<br>Wedding</h1><p>Monday, 10 April 2028 · Knightor Winery</p><form id="loginForm"><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit" style="width:100%">Enter the website</button><p id="loginError" class="error" role="alert"></p></form><p class="small">Guest access · This is a simple browser-side gate, not secure password protection.</p></div></section>
 <div id="site" class="hidden"><header class="hero"><div><div class="eyebrow">Please join us to celebrate</div><h1>Jack &amp; Sarah</h1><p>10 April 2028 · Knightor Winery, Cornwall</p><a class="button" href="#details">Wedding details</a></div></header><main>
 <section class="intro"><div class="eyebrow">A day to remember</div><h2>Love, laughter &amp; the Cornish countryside</h2><p>We're so excited to celebrate with you. This little corner of our website has the details you'll need for our wedding day, plus travel and accommodation ideas to help you plan your visit.</p></section>
+<section id="countdown" class="section" aria-live="polite">
+<h2>Our wedding countdown</h2>
+<p style="text-align:center">Not long now until we say “I do”!</p>
+<div class="grid" id="countdownGrid" style="grid-template-columns:repeat(4,minmax(0,1fr));text-align:center;max-width:760px;margin:1.5rem auto">
+<div class="card"><h3 id="countDays" style="font-size:clamp(1.8rem,5vw,3rem);margin:.15rem 0">—</h3><p>Days</p></div>
+<div class="card"><h3 id="countHours" style="font-size:clamp(1.8rem,5vw,3rem);margin:.15rem 0">—</h3><p>Hours</p></div>
+<div class="card"><h3 id="countMinutes" style="font-size:clamp(1.8rem,5vw,3rem);margin:.15rem 0">—</h3><p>Minutes</p></div>
+<div class="card"><h3 id="countSeconds" style="font-size:clamp(1.8rem,5vw,3rem);margin:.15rem 0">—</h3><p>Seconds</p></div>
+</div>
+<p id="countdownMessage" style="text-align:center">Counting down to Monday, 10 April 2028.</p>
+</section>
+
 <section id="details" class="section"><h2>The wedding</h2><div class="grid"><article class="card"><h3>When</h3><p><strong>Monday, 10 April 2028</strong></p><p>Please check back nearer the day for the final timings and schedule.</p></article><article class="card"><h3>Where</h3><p><strong>Knightor Winery</strong><br>Trethurgy, near St Austell, Cornwall<br>PL26 8YQ</p><a href="https://www.knightor.com/weddings.html" target="_blank" rel="noopener">Official wedding venue website ↗</a></article><article class="card"><h3>What to wear</h3><p>Think smart, comfortable and countryside-friendly. Cornwall can be breezy, so a layer and sensible footwear are a good idea.</p></article></div></section>
 
 <section class="section"><h2>Places to stay</h2><div class="grid"><article class="card"><h3>On-site accommodation</h3><p>On-site accommodation is available for family and the bridal party only. If you haven’t booked yet, please contact the bride or groom to confirm availability before making arrangements.</p><a href="https://www.knightor.com/" target="_blank" rel="noopener">Contact Knightor ↗</a></article><article class="card"><h3>Travelodge</h3><p>Check nearby Travelodge locations around St Austell and the surrounding area, and compare the route to the venue before booking.</p><a href="https://www.travelodge.co.uk/" target="_blank" rel="noopener">Find a Travelodge ↗</a></article><article class="card"><h3>More local stays</h3><p>There are hotels, B&amp;Bs and holiday lets around St Austell, Charlestown and the surrounding villages.</p><a href="https://www.google.com/maps/search/hotels+near+Knightor+Winery+Cornwall/" target="_blank" rel="noopener">Browse stays on Google Maps ↗</a></article></div><p class="note">Accommodation details and availability can change, so please confirm directly with the provider. If you plan to drink, please arrange a taxi or a designated driver in advance.</p></section>
@@ -117,5 +129,24 @@ img,video,iframe{max-width:100%}
 <section class="section"><h2>We'll see you there</h2><p>Thank you for being part of our lives. We can't wait to celebrate with you in Cornwall!</p><p><strong>Jack &amp; Sarah</strong></p></section></main><footer><p>Jack &amp; Sarah's Wedding · 10 April 2028</p><p class="small" style="color:#e5e8df">Made with love in Cornwall</p></footer></div>
 <script>
 document.getElementById('loginForm').addEventListener('submit',function(e){e.preventDefault();const u=document.getElementById('username').value.trim();const p=document.getElementById('password').value;if(u.toLowerCase()==='guest'&&p==='10042028'){document.getElementById('loginScreen').classList.add('hidden');document.getElementById('site').classList.remove('hidden');window.scrollTo(0,0)}else{document.getElementById('loginError').textContent='That username or password does not match. Please try again.'}});
+function updateWeddingCountdown(){
+  const target = new Date('2028-04-10T00:00:00+01:00').getTime();
+  const remaining = target - Date.now();
+  if (remaining <= 0) {
+    ['countDays','countHours','countMinutes','countSeconds'].forEach(id => document.getElementById(id).textContent = '0');
+    document.getElementById('countdownMessage').textContent = 'Today is the big day! Wishing Jack & Sarah a wonderful wedding.';
+    return;
+  }
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining % 86400000) / 3600000);
+  const minutes = Math.floor((remaining % 3600000) / 60000);
+  const seconds = Math.floor((remaining % 60000) / 1000);
+  document.getElementById('countDays').textContent = days;
+  document.getElementById('countHours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('countMinutes').textContent = String(minutes).padStart(2,'0');
+  document.getElementById('countSeconds').textContent = String(seconds).padStart(2,'0');
+}
+updateWeddingCountdown();
+setInterval(updateWeddingCountdown, 1000);
 document.getElementById('rsvpForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(e.target);const s=[`Names: ${d.get('names')}`,`Attendance: ${d.get('attendance')}`,`Number attending: ${d.get('count')}`,`Dietary requirements: ${d.get('dietary')||'None entered'}`,`Allergies/details: ${d.get('allergies')||'None entered'}`,`Accessibility/other: ${d.get('accessibility')||'None entered'}`].join('\n');const b=document.getElementById('rsvpMessage');b.textContent='RSVP preview only — nothing has been sent or saved.\n\n'+s;b.classList.remove('hidden')});
 </script></body></html>
