@@ -178,6 +178,20 @@ img,video,iframe{max-width:100%}
   #countdown #countdownGrid>.card p{font-size:.75rem}
 }
 
+
+/* Collapsible guest FAQ directly below the venue map */
+#faqAccordion .faq-item{background:#254678;border:1px solid #5274a5;margin:.75rem 0;color:#f5f0e6}
+#faqAccordion .faq-item summary{cursor:pointer;list-style:none;padding:1rem 3rem 1rem 1rem;position:relative;font-weight:bold}
+#faqAccordion .faq-item summary::-webkit-details-marker{display:none}
+#faqAccordion .faq-item summary::after{content:"+";position:absolute;right:1rem;top:.75rem;font:1.5rem Arial,sans-serif}
+#faqAccordion .faq-item[open] summary::after{content:"−"}
+#faqAccordion .faq-answer{padding:0 1rem 1rem}
+#faqAccordion .faq-answer p:first-child{margin-top:0}
+#faqAccordion .transport{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.75rem}
+#faqAccordion .transport article{border:1px solid #5274a5;padding:.85rem;background:#172b50}
+#faqAccordion .transport h3{margin:.1rem 0 .35rem;font-size:1.05rem}
+#faqAccordion .faq-item summary:focus-visible{outline:2px solid #f5f0e6;outline-offset:2px}
+
 </style></head><body>
 <section id="loginScreen" class="login-wrap"><div class="login"><div class="eyebrow">A little celebration in Cornwall</div><h1>Jack &amp; Sarah's<br>Wedding</h1><p>Monday, 10 April 2028 · Knightor Winery</p><form id="loginForm"><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><button class="button" type="submit" style="width:100%">Enter the website</button><p id="loginError" class="error" role="alert"></p></form><p class="small">Guest access · This is a simple browser-side gate, not secure password protection.</p></div></section>
 <div id="site" class="hidden"><header class="hero"><div><div class="eyebrow">Please join us to celebrate</div><h1>Jack &amp; Sarah</h1><p>10 April 2028 · Knightor Winery, Cornwall</p><a class="button" href="#details">Wedding details</a>
@@ -214,6 +228,26 @@ img,video,iframe{max-width:100%}
 <section id="rsvp" class="section"><h2>RSVP</h2><p>Please let us know whether you can join us and share any dietary or accessibility requirements below.</p><div class="card" style="padding:.5rem;overflow:hidden"><iframe title="Jack and Sarah's Wedding RSVP Form" src="https://docs.google.com/forms/d/e/1FAIpQLScPCLHDfoj4IlBWyXhvwMMpT9iFd-5iKE0uCTGO3ovbadh9PA/viewform?embedded=true" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0" style="display:block;border:0;background:#fff;min-height:900px">Loading…</iframe></div><p class="note">If the form does not appear, <a href="https://docs.google.com/forms/d/e/1FAIpQLScPCLHDfoj4IlBWyXhvwMMpT9iFd-5iKE0uCTGO3ovbadh9PA/viewform" target="_blank" rel="noopener">open the RSVP form in a new tab</a>.</p></section>
 <section class="section"><h2>Find the venue</h2><p>Knightor Winery is near St Austell and the Eden Project. Use the map below to plan your route and check journey times before setting off.</p><iframe class="map" title="Google Map showing Knightor Winery" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Knightor%20Winery%2C%20Trethurgy%2C%20Cornwall&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><p><a class="button" href="https://www.google.com/maps/search/?api=1&query=Knightor+Winery+Trethurgy+Cornwall" target="_blank" rel="noopener">Open in Google Maps ↗</a></p></section>
 
+<section id="faq" class="section"><h2>Guest FAQs</h2><p>Quick answers to common questions about the day. Tap or click a question to read more.</p>
+<div id="faqAccordion">
+<details class="faq-item"><summary>What should I wear?</summary><div class="faq-answer"><p>Think smart, comfortable and countryside-friendly. Cornwall can be breezy, so bringing an extra layer and wearing sensible footwear is a good idea.</p></div></details>
+<details class="faq-item"><summary>Can I pay by card at the bar?</summary><div class="faq-answer"><p>Yes. The bar accepts both cash and card. Drinks tokens will also be provided as part of the evening meal arrangements.</p></div></details>
+<details class="faq-item"><summary>Is the venue accessible?</summary><div class="faq-answer"><p>The venue is very accessible. If you have a particular access requirement or would like to check a specific detail before the day, please contact us so we can help you plan.</p></div></details>
+<details class="faq-item"><summary>Is food provided?</summary><div class="faq-answer"><p>The wedding buffet is planned to run from 6:00 pm until around 9:00 pm. Please let us know about dietary requirements and allergies in your RSVP so we can pass the information on to the catering team. If you have a serious allergy, please contact us directly as well.</p></div></details>
+<details class="faq-item"><summary>Where can I stay?</summary><div class="faq-answer"><p>On-site accommodation is reserved for family and the bridal party. There are also hotels, B&amp;Bs and holiday lets around St Austell, Charlestown and nearby villages. Please book early and check your route to the venue.</p><p><a href="https://www.travelodge.co.uk/" target="_blank" rel="noopener">Find a Travelodge ↗</a> · <a href="https://www.google.com/maps/search/hotels+near+Knightor+Winery+Cornwall/" target="_blank" rel="noopener">Search nearby accommodation ↗</a></p></div></details>
+<details class="faq-item"><summary>How do I get to the venue?</summary><div class="faq-answer"><p>The venue is at Knightor Winery, Trethurgy, near St Austell, Cornwall, PL26 8YQ. If travelling by train, St Austell is the nearest major railway station; plan onward transport from the station to the winery in advance.</p><p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Knightor+Winery%2C+Trethurgy%2C+Cornwall+PL26+8YQ" target="_blank" rel="noopener">Open directions to Knightor Winery ↗</a> · <a href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener">Check train times ↗</a></p></div></details>
+<details class="faq-item"><summary>Local taxis and transport</summary><div class="faq-answer"><p>We recommend booking transport in advance, particularly for the journey home after the reception. Contact providers directly to check availability and prices:</p><div class="transport">
+<article><h3>BW Cars</h3><p>St Austell taxi and private hire service.</p><p><strong>01726 984239</strong><br><a href="https://www.bwcarsstaustell.co.uk/" target="_blank" rel="noopener">Website and bookings ↗</a></p></article>
+<article><h3>Spot On Cabs</h3><p>Local St Austell taxi firm.</p><p><strong>01726 77877</strong><br><a href="https://www.staustell.co.uk/business/spot-on-cabs/" target="_blank" rel="noopener">Business listing ↗</a></p></article>
+<article><h3>A2B Taxis Cornwall</h3><p>Taxi service with a St Austell office.</p><p><strong>01726 606060</strong><br><a href="https://a2btaxistruro.com/contact-us/" target="_blank" rel="noopener">Contact and booking options ↗</a></p></article>
+<article><h3>Allen’s Travel</h3><p>Minibus hire, worth contacting if a group would like to travel together.</p><p><strong>01726 73906</strong><br><a href="https://www.staustelltown.co.uk/web-2-0-directory/business-category/taxis-private-hire/" target="_blank" rel="noopener">Local directory listing ↗</a></p></article>
+</div><p class="note">These are suggestions only; we haven’t arranged transport with these companies. Please confirm availability, fares, vehicle capacity and the latest contact details directly with the provider. Ask about a return journey and late-night pickup when booking.</p></div></details>
+<details class="faq-item"><summary>Is there parking?</summary><div class="faq-answer"><p>Please check the venue’s latest parking arrangements before travelling and follow any instructions from the venue on the day. If you plan to drink, please arrange a taxi or a designated driver.</p><p><a href="https://www.knightor.com/weddings.html" target="_blank" rel="noopener">Knightor Winery wedding information ↗</a></p></div></details>
+<details class="faq-item"><summary>What about gifts?</summary><div class="faq-answer"><p>Please see the gifts section above on our main wedding website for our wishes and any gift information.</p><a class="button" href="#gifts">Go to the gifts section</a></div></details>
+</div>
+<p class="note">Have a question that isn’t covered here? Please contact Jack or Sarah directly. We’ll update this section if any important details change.</p>
+<p><a class="button" href="faq.html">Open the full FAQ page ↗</a></p>
+</section>
 
 <section class="section"><h2>We'll see you there</h2><p>Thank you for being part of our lives. We can't wait to celebrate with you in Cornwall!</p><p><strong>Jack &amp; Sarah</strong></p></section></main><footer><p>Jack &amp; Sarah's Wedding · 10 April 2028</p><p class="small" style="color:#e5e8df">Made with love in Cornwall</p></footer></div>
 <script>
